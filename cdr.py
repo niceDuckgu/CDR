@@ -91,6 +91,8 @@ if __name__ == "__main__":
     enh_inputs = cv2.cvtColor(cv2.imread('./example/enh_inputs.png', cv2.IMREAD_UNCHANGED),cv2.COLOR_BGR2RGB)
 
     cdr_a, cdr_b = cdr(inputs = org_inputs, gt = example_gt)
+    print('CDR score of the original result of colorization model')
     print(f'Org_CDR_a:{cdr_a:.3f} Org_CDR_b:{cdr_b:.3f}')
     cdr_a, cdr_b = cdr(inputs = enh_inputs, gt = example_gt)
+    print('CDR score of enhancing result of our model')
     print(f'Enh_CDR_a:{cdr_a:.3f} Enh_CDR_b:{cdr_b:.3f}')
